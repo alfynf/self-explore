@@ -1,8 +1,10 @@
 // Day 11: 2D Arrays
 
-// Task: Given a 6x6 2D Array A. We define an hourglass in to be a subset of values with indices.
-// There are 16 hourglasses in A, and an hourglass sum is the sum of an hourglass' values.
-// Calculate the hourglass sum for every hourglass in A, then print the maximum hourglass sum.
+/*
+Task: Given a 6x6 2D Array A. We define an hourglass in to be a subset of values with indices.
+There are 16 hourglasses in A, and an hourglass sum is the sum of an hourglass' values.
+Calculate the hourglass sum for every hourglass in A, then print the maximum hourglass sum.
+*/
 
 package main
 
