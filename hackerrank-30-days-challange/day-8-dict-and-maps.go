@@ -22,22 +22,25 @@ func main() {
 	var inputCount int
 	fmt.Scan(&inputCount)
 
-	var arr []string
 	dict := make(map[string]string)
 
 	input := bufio.NewScanner(os.Stdin)
+	var count int
 	for input.Scan() {
-		arr = append(arr, input.Text())
-	}
-	for i := 0; i < inputCount; i++ {
-		data := strings.Split(arr[i], " ")
+		data := strings.Split(input.Text(), " ")
 		dict[data[0]] = data[1]
+		if count == inputCount-1 {
+			break
+		}
+		count++
 	}
-	for j := len(arr) - inputCount; j < len(arr); j++ {
-		if len(dict[arr[j]]) < 1 {
+
+	for input.Scan() {
+		query := input.Text()
+		if len(dict[query]) < 1 {
 			fmt.Println("Not found")
 		} else {
-			fmt.Printf("%s=%s\n", arr[j], dict[arr[j]])
+			fmt.Printf("%s=%s\n", query, dict[query])
 		}
 	}
 }

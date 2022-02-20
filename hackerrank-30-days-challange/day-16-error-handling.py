@@ -10,10 +10,9 @@ import random
 import re
 import sys
 
-if __name__ == '__main__':
-    S = input()
-    try:
-        S = int(S)
-        print(S)
-    except:
-        print("Bad String")
+S = input()
+try:
+    S = int(S)
+    print(S)
+except:
+    print("Bad String")
